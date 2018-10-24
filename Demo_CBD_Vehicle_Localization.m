@@ -25,6 +25,12 @@ VehicleLocalize;
 figure;plot(CurrentImage);hold on
 plot(GT(:,2),GT(:,1));
 title(Result2D);grid
+disp('Whould you like to generate a video showing the trip and the estimated vehicle location on the map? Y/N');
+key = getkey;
+if key==121
+    disp('Generating the video. This will take a few minutes.')
+    GenerateResultVideo_CBD;
+end
 
 %LDB
 % P_MLDB=@LDB;
